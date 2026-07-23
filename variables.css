@@ -1,0 +1,28 @@
+:root{
+
+    /* Colors */
+
+    --primary:#D4AF37;
+    --black:#050505;
+    --dark:#111111;
+    --white:#ffffff;
+    --text:#cfcfcf;
+
+    /* Fonts */
+
+    --heading-font:'Cinzel', serif;
+    --body-font:'Poppins', sans-serif;
+
+    /* Shadow */
+
+    --shadow:0 15px 40px rgba(0,0,0,.35);
+
+    /* Radius */
+
+    --radius:16px;
+
+    /* Transition */
+
+    --transition:.35s ease;
+
+--bg: #F7EEDB;}

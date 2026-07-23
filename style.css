@@ -1,0 +1,508 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--body-font);
+    background:#F7EEDB;
+    color:var(--white);
+}
+
+img{
+    display:block;
+    max-width:100%;
+}
+
+a{
+    text-decoration:none;
+}
+
+ul{
+    list-style:none;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    background:rgba(5,5,5,.95);
+    backdrop-filter:blur(10px);
+    z-index:1000;
+    border-bottom:1px solid rgba(212,175,55,.15);
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    height:75px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 20px;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:48px;
+    height:48px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.logo-text{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+}
+
+.line1{
+    font-family:var(--heading-font);
+    font-size:20px;
+    font-weight:700;
+    color:var(--primary);
+    text-transform:uppercase;
+    line-height:1;
+}
+
+.line2{
+    font-family:var(--body-font);
+    font-size:14px;      /* আগের থেকে বড় */
+    font-weight:700;     /* Bold */
+    color:var(--primary);
+    letter-spacing:5px;
+    text-transform:uppercase;
+
+    text-align:center;   /* BABA VOLANATH-এর মাঝখানে */
+    margin-top:4px;
+}
+
+.menu-toggle{
+    font-size:32px;
+    color:white;
+    background:none;
+    border:none;
+    cursor:pointer;
+}
+/* =========================
+   MOBILE MENU
+========================= */
+
+.nav-links{
+    position:fixed;
+    top:75px;
+    right:-100%;
+    width:240px;              /* আগে 280px ছিল */
+    height:auto;              /* পুরো screen না */
+    max-height:calc(100vh - 90px);
+
+    background:#111;
+    border-radius:0 0 0 18px;
+    border-left:1px solid rgba(212,175,55,.2);
+    border-bottom:1px solid rgba(212,175,55,.2);
+
+    padding:18px 20px;
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+
+    transition:.35s ease;
+    overflow-y:auto;
+}
+
+.nav-links.active{
+    right:0;
+}
+
+.nav-links a{
+    display:block;
+    padding:12px 10px;
+    font-size:17px;
+    font-weight:600;
+    border-radius:10px;
+    transition:.3s;
+}
+
+.nav-links a:hover{
+    background:rgba(212,175,55,.12);
+    color:var(--primary);
+    padding-left:18px;
+}
+.menu-toggle{
+    width:34px;
+    height:26px;
+    background:none;
+    border:none;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:space-between;
+
+    cursor:pointer;
+}
+
+.menu-toggle span{
+    width:100%;
+    height:3px;
+    background:#fff;
+    border-radius:10px;
+}
+.nav-links li{
+    width:100%;
+}
+
+.nav-links a{
+    display:flex;
+    align-items:center;
+    width:100%;
+    padding:14px 16px;
+    border-radius:12px;
+    transition:all .3s ease;
+}
+
+.nav-links a:hover{
+    background:rgba(212,175,55,.12);
+    color:var(--primary);
+    transform:translateX(6px);
+}
+a{
+    color:inherit;
+    text-decoration:none;
+}
+/* Remove blue tap highlight */
+
+*{
+    -webkit-tap-highlight-color: transparent;
+}
+
+button,
+a,
+img{
+    -webkit-tap-highlight-color: transparent;
+    outline:none;
+}
+button,
+a{
+    transition:transform .18s ease, opacity .18s ease;
+}
+
+button:active,
+a:active{
+    transform:scale(.96);
+    opacity:.8;
+}
+/* HERO */
+
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+
+    padding:80px 20px 60px;
+    margin-top:40px;
+}
+
+.hero-content{
+    text-align:center;
+}
+
+.hero-tag{
+    display:inline-block;
+    font-size:13px;
+    font-weight:600;
+    letter-spacing:2px;
+    color:#8b5e3c;
+    margin-bottom:15px;
+}
+
+.hero h1{
+    font-size:42px;
+    line-height:1.2;
+    color:#4b1038;
+    margin-bottom:18px;
+}
+
+.hero p{
+    font-size:16px;
+    line-height:1.7;
+    color:#666;
+    max-width:500px;
+    margin:0 auto 30px;
+}
+
+.hero-buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.hero-image img{
+    width:100%;
+    max-width:420px;
+    border-radius:20px;
+    display:block;
+}
+/* HERO */
+
+.hero{
+    padding:19px 20px 80px;
+    display:flex;
+    justify-content:center;
+}
+
+.hero-content{
+    max-width:700px;
+    text-align:center;
+}
+
+.hero h1{
+    font-size:12px;
+    letter-spacing:3px;
+    color:#8b5e3c;
+    margin-bottom:18px;
+    font-weight:700;
+}
+
+.hero h2{
+    font-size:30px;
+    line-height:1.2;
+    color:#4b1038;
+    margin-bottom:20px;
+}
+
+.hero p{
+    font-size:17px;
+    line-height:1.8;
+    color:#666;
+    margin-bottom:35px;
+}
+
+.btn,
+.btn-outline{
+    display:inline-block;
+    padding:14px 34px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.3s;
+}
+
+.btn{
+    background:#ff6b35;
+    color:#fff;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+.hero-about{
+    margin-top:70px;
+}
+
+.hero-about h3{
+    font-size:28px;
+    color:#4b1038;
+    margin-bottom:15px;
+}
+
+.hero-about p{
+    max-width:620px;
+    margin:0 auto 30px;
+}
+
+.btn-outline{
+    border:2px solid #4b1038;
+    color:#4b1038;
+}
+
+.btn-outline:hover{
+    background:#4b1038;
+    color:#fff;
+}
+
+.btn:active,
+.btn-outline:active{
+    transform:scale(.95);
+}
+/* GALLERY */
+
+.gallery{
+    padding:70px 15px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:34px;
+    color:#4b1038;
+    margin-bottom:12px;
+}
+
+.section-title p{
+    color:#666;
+    max-width:520px;
+    margin:auto;
+    line-height:1.7;
+}
+
+.gallery-grid{
+    display:grid;
+    gap:24px;
+}
+
+.gallery-card{
+    background:#fff;
+    border-radius:10px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.gallery-card:hover{
+    transform:translateY(-8px);
+}
+
+.card-image{
+    height:.1px;
+    background:linear-gradient(135deg,#d8c2b5,#f5ede8);
+}
+
+.gallery-card h3{
+    padding:20px 20px 10px;
+    color:#4b1038;
+}
+
+.gallery-card p{
+    padding:0 20px 22px;
+    color:#666;
+    line-height:1.6;
+}
+/* CONTACT */
+
+.contact{
+    padding:25px 10px 50px;
+}
+
+.contact-card{
+    background:#fff;
+    border-radius:20px;
+    padding:30px;
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+    text-align:center;
+}
+
+.contact-item{
+    margin-bottom:25px;
+}
+
+.contact-item h3{
+    color:#4b1038;
+    margin-bottom:8px;
+}
+
+.contact-item p{
+    color:#666;
+}
+footer{
+    background:#111;
+    color:#fff;
+    text-align:center;
+    padding:50px 20px;
+}
+
+footer h3{
+    margin-bottom:12px;
+}
+
+footer p{
+    color:#bbb;
+    margin-bottom:12px;
+}
+
+footer span{
+    color:#777;
+    font-size:14px;
+}
+/* Scroll Animation */
+
+.reveal{
+    opacity:0;
+    transform:translateY(60px);
+    transition:all .8s ease;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* Buttons */
+
+.btn,
+.btn-outline{
+    transition:.4s ease;
+}
+
+.btn:hover,
+.btn-outline:hover{
+    transform:translateY(-4px) scale(1.03);
+}
+
+.btn:active,
+.btn-outline:active{
+    transform:scale(.96);
+}
+
+/* Cards */
+
+.gallery-card{
+    transition:.35s ease;
+}
+
+.gallery-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+.reveal{
+    opacity:0;
+    transform:translateY(50px);
+    transition:0.8s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
